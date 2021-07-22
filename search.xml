@@ -4,13 +4,38 @@
   
     
     <entry>
-      <title></title>
+      <title>Markdown</title>
+      <link href="/2021/07/22/h1/"/>
+      <url>/2021/07/22/h1/</url>
+      
+        <content type="html"><![CDATA[<p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia等网站，如各大博客平台：WordPress、Drupal、简书等。</p><p>其语法如下：<br>##标题</p><p>1.#加文字为一级标题</p><p>2.##加文字为二级标题</p><p>3.###加文字为三级标题</p><p>其他标题同理，需要几级标题，就需要几个#，最高位六级标题</p><p>##字体<br><strong>hello world！</strong>(文字两边加两个*为粗体)</p><p>*hello world!<em>（文字两边加一个</em>为斜体）</p><p>***hello world!**<em>（文字两边三个</em>为加粗斜体）</p><p><del>hello world!</del>(文字两边两个~为添加删除线效果)</p><p>##引用</p><blockquote><p>需要引用的话（&gt;加文字为引用）</p></blockquote><p>##分割线</p><hr><hr><p>三个*或-都是分割线</p><p>##图片<br><img src="D:\学习\实训\任务六.jpg" alt="图片">（！[名字]（图片地址））本地图片</p><p>网络图片只需要将图片地址更改为其图片地址即可，可以看该网页的源码查看其图片地址</p><p>##超链接<br><a href="https://space.bilibili.com/357458696">点击此链接跳转到我的Bilibili账号</a></p><p>其语法为[链接名字]  (链接地址)</p><p>##列表</p><ol><li>A</li><li>B</li><li>C</li></ol><p>数字后加空格自动变成列表</p><p>##表格<br>| 姓名 | 性别 | 生日 |</p><p>|  –   | – | – |</p><p>| 李世杰 | 男 | 2001.6.4 |</p><table><thead><tr><th>Syntax</th><th>Description</th></tr></thead><tbody><tr><td>Header</td><td>Title</td></tr><tr><td>Paragraph</td><td>Text</td></tr></tbody></table><p>##代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public  class</span><br><span class="line">   &#123;</span><br><span class="line">   caujc</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><p>三个`中间用来写代码</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>介绍</title>
       <link href="/2021/07/20/hello-world/"/>
       <url>/2021/07/20/hello-world/</url>
       
-        <content type="html"><![CDATA[<hr><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍 "></a>介绍 </h2><p>欢迎来到李世杰的个人网站！这个网站是基于Hexo为基础建的，网站刚建起来比较简陋，很多的功能与想法都还没有实现；目前的针对这个网站的计划是一边学习前端知识，一边去完善，可能需要很长的时间；我平时也会将自己的学习情况写成博客上传到网站上，希望有兴趣的朋友可以阅读并提出意见。冲冲冲！</p>]]></content>
+        <content type="html"><![CDATA[<p>欢迎来到李世杰的个人网站！这个网站是基于Hexo为基础建的，网站刚建起来比较简陋，很多的功能与想法都还没有实现；目前的针对这个网站的计划是一边学习前端知识，一边去完善，可能需要很长的时间；我平时也会将自己的学习情况写成博客上传到网站上，希望有兴趣的朋友可以阅读并提出意见。冲冲冲！</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 介绍 </tag>
+            
+        </tags>
       
     </entry>
     
