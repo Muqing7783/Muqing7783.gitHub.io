@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>更新日志</title>
+      <link href="/2021/07/29/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
+      <url>/2021/07/29/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>7.20</p></blockquote><p>网站建站完成，并上传了介绍文章</p><blockquote><p>7.21</p></blockquote><p>针对matery主题进行个性化优化</p><blockquote><p>7.22</p></blockquote><p>使用Valine配置了评论与留言板功能</p><blockquote><p>7.23</p></blockquote><p>进行优化</p><blockquote><p>7.29</p></blockquote><p>发现文章无法正常上传，问题已解决</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 其他 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>学习随笔</title>
       <link href="/2021/07/22/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/"/>
       <url>/2021/07/22/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/</url>
       
-        <content type="html"><![CDATA[<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><ul><li>博客的文章格式的不正确会导致无法正常上传</li></ul>]]></content>
       
       
       
