@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Java学习</title>
+      <link href="/2021/08/01/Java%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2021/08/01/Java%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><ul><li><p>Java的long类型的整数与float类型的浮点数都需要在数据的后面加上L/F</p></li><li><p>类型转换</p><p>强制转换由高至低转换，自动转换由低至高转换</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>更新日志</title>
       <link href="/2021/07/29/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
       <url>/2021/07/29/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
