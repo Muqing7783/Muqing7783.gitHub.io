@@ -571,7 +571,7 @@
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+        background: url("https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -809,16 +809,19 @@
 <script src="/libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
-        el: '#vcomments',
-        appId: 'hwXV3Fl1Ro52os3nwVp9XhhJ-gzGzoHsz',
-        appKey: 'fPTSXfrmTC7vUeTUOoEwPoIg',
-        notify: 'false' === 'true',
-        verify: 'true' === 'true',
-        visitor: 'true' === 'true',
-        avatar: 'monsterid',
-        pageSize: '10',
-        lang: 'zh-cn',
-        placeholder: '快来抢沙发吧！（评论ID可以自己设置）'
+            el: '#vcomments',
+            appId: 'hwXV3Fl1Ro52os3nwVp9XhhJ-gzGzoHsz',
+            appKey: 'fPTSXfrmTC7vUeTUOoEwPoIg',
+            visitor: 'true' === 'true',
+            avatar: 'monsterid',
+            pageSize: '10',
+            lang: 'zh-cn',
+            placeholder: ' ヾﾉ≧∀≦)o 快来抢沙发吧！（评论ID可以自己设置）',
+            enableQQ: '',
+            meta : ['nick'],
+            requiredFields: ['nick'],
+            tagMeta : ["博主","小伙伴","访客"],
+             master : ["450cce6bd005d2deea2853342dbec7a1"],
     });
 </script>
 
