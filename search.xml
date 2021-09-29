@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>hello</title>
-      <link href="/2021/09/11/hello/"/>
-      <url>/2021/09/11/hello/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL</title>
       <link href="/2021/09/07/MySQL/"/>
       <url>/2021/09/07/MySQL/</url>
@@ -40,7 +27,7 @@
       <link href="/2021/08/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
       <url>/2021/08/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本博客是基于Hexo而搭建的，Hexo是一个快速、简介且高效的博客框架。Hexo使用Markdown（主要）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。并且Hexo具有很多的主题提供选择，使博客的搭建更加简单。下面来详细介绍基于Hexo的博客搭建教程。</p><blockquote></blockquote><h1 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h1><ol><li><p>nodejs</p></li><li><p>Git</p></li><li><p>Github账号</p></li><li><p>备案好的域名（可选）</p></li><li><p>编译器</p><blockquote></blockquote></li></ol><h1 id="1-nodejs"><a href="#1-nodejs" class="headerlink" title="1.nodejs"></a>1.nodejs</h1><p><a href="https://nodejs.org/en/">node.js</a>点击进入该网站</p><p><img src="D:\Blog\myblog\source_posts\博客搭建详细教程\nodejs.png" alt="nodejs"></p><p>点击下载左边的即可。</p><p>下载完成后安装<img src="D:\Blog\图片\nodejs1.png" alt="nodejs1"></p><p>点击下一步等待安装完成即可。</p><blockquote></blockquote><h1 id="2-Git"><a href="#2-Git" class="headerlink" title="2.Git"></a>2.Git</h1><p><a href="https://git-scm.com/">Git</a>进入该网站</p><p><img src="D:\Blog\图片\git0.png" alt="git0"></p><p><img src="D:\Blog\图片\git1.png" alt="git1"></p><p>点击此处Download for Windows进入下载界面，等待下载（64位）、安装。</p><p><img src="D:\Blog\图片\git3.png" alt="git3"></p><p>安装选项默认就行，安装路径除外。正常安装完成后使用送鼠标对着空白桌面右键会出现Git的可执行选项，如图所示：</p><p><img src="D:\Blog\图片\git4.png" alt="git4"></p><blockquote></blockquote><h1 id="3-Github账号（已有请忽略）"><a href="#3-Github账号（已有请忽略）" class="headerlink" title="3.Github账号（已有请忽略）"></a>3.Github账号（已有请忽略）</h1><p><a href="https://github.com/">Github官方网站</a>进入网站后按照要求注册一个账号</p><p><img src="D:\Blog\图片\github0.png" alt="github0"></p><p>点击此处的”New”创建新的仓库</p><p><img src="D:\Blog\图片\github1.png" alt="github1"></p><p>按照如题所示进行仓库的创建，注意此处的仓库名字须于创建账号时的名字相同，再在后面加上”.github.io”,（如：我的账号名字是Muqing7783，所以我要创建的仓库名字为Muqing7783.github.io）我这里报错是因为我已经创建过一个相同名字的仓库。</p><p><img src="D:\Blog\图片\github2.png" alt="github2"></p><blockquote></blockquote><h1 id="4-域名"><a href="#4-域名" class="headerlink" title="4.域名"></a>4.域名</h1><p>如果需要将网站绑域名，可以在网上购买域名，如：阿里、腾讯等的域名，这里推荐使用阿里的域名。购买好的域名进行解析，解析完成后在Github里进行绑定即可。</p><blockquote></blockquote><h1 id="5-网站搭建操作"><a href="#5-网站搭建操作" class="headerlink" title="5.网站搭建操作"></a>5.网站搭建操作</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本博客是基于Hexo而搭建的，Hexo是一个快速、简介且高效的博客框架。Hexo使用Markdown（主要）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。并且Hexo具有很多的主题提供选择，使博客的搭建更加简单。下面来详细介绍基于Hexo的博客搭建教程。</p><blockquote></blockquote><h1 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h1><ol><li><p>nodejs</p></li><li><p>Git</p></li><li><p>Github账号</p></li><li><p>备案好的域名（可选）</p></li><li><p>编译器</p><blockquote></blockquote></li></ol><h1 id="1-nodejs"><a href="#1-nodejs" class="headerlink" title="1.nodejs"></a>1.nodejs</h1><p><a href="https://nodejs.org/en/">node.js</a>点击进入该网站</p><p><img src="https://raw.githubusercontent.com/Muqing7783/imgbed/main/posts/202109292312309.png" alt="nodejs"></p><p>点击下载左边的即可。</p><p>下载完成后安装<img src="D:\Blog\图片\nodejs1.png" alt="nodejs1"></p><p>点击下一步等待安装完成即可。</p><blockquote></blockquote><h1 id="2-Git"><a href="#2-Git" class="headerlink" title="2.Git"></a>2.Git</h1><p><a href="https://git-scm.com/">Git</a>进入该网站</p><p><img src="D:\Blog\图片\git0.png" alt="git0"></p><p><img src="D:\Blog\图片\git1.png" alt="git1"></p><p>点击此处Download for Windows进入下载界面，等待下载（64位）、安装。</p><p><img src="D:\Blog\图片\git3.png" alt="git3"></p><p>安装选项默认就行，安装路径除外。正常安装完成后使用送鼠标对着空白桌面右键会出现Git的可执行选项，如图所示：</p><p><img src="D:\Blog\图片\git4.png" alt="git4"></p><blockquote></blockquote><h1 id="3-Github账号（已有请忽略）"><a href="#3-Github账号（已有请忽略）" class="headerlink" title="3.Github账号（已有请忽略）"></a>3.Github账号（已有请忽略）</h1><p><a href="https://github.com/">Github官方网站</a>进入网站后按照要求注册一个账号</p><p><img src="D:\Blog\图片\github0.png" alt="github0"></p><p>点击此处的”New”创建新的仓库</p><p><img src="D:\Blog\图片\github1.png" alt="github1"></p><p>按照如题所示进行仓库的创建，注意此处的仓库名字须于创建账号时的名字相同，再在后面加上”.github.io”,（如：我的账号名字是Muqing7783，所以我要创建的仓库名字为Muqing7783.github.io）我这里报错是因为我已经创建过一个相同名字的仓库。</p><p><img src="D:\Blog\图片\github2.png" alt="github2"></p><blockquote></blockquote><h1 id="4-域名"><a href="#4-域名" class="headerlink" title="4.域名"></a>4.域名</h1><p>如果需要将网站绑域名，可以在网上购买域名，如：阿里、腾讯等的域名，这里推荐使用阿里的域名。购买好的域名进行解析，解析完成后在Github里进行绑定即可。</p><blockquote></blockquote><h1 id="5-网站搭建操作"><a href="#5-网站搭建操作" class="headerlink" title="5.网站搭建操作"></a>5.网站搭建操作</h1>]]></content>
       
       
       
