@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-04
+                    2021-10-05
                 </div>
                 
 
@@ -569,6 +569,60 @@ hexo s
 <p>在浏览器中输入<a href="http://localhost:4000即可查看">http://localhost:4000即可查看</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110042311873.png" alt="Snipaste_2021-10-04_23-10-47"></p>
 <p>界面类似这个，这里我修改了一些东西，所以有些东西不一样。进入本地该网页的时候需要确认hexo s服务是开启的不然无法查看界面</p>
+<ul>
+<li><p>生成SSH添加到GitHub</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"yourname"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"youremail"</span>
+</code></pre>
+<p>分别运行这两个命令，”yourname“为你的GitHub账号ID，“”youremail“为注册GitHub的邮箱</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> config user.name
+<span class="token function">git</span> config user.email
+</code></pre>
+<p>使用这两条命令检查是否正确</p>
+<pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"youremail"</span>
+</code></pre>
+<p>使用该命令生成SSH，一直回车知道提示生成.ssh文件夹，按照提示的目录找到.ssh文件夹</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051158535.png" alt="Snipaste_2021-10-05_11-58-40"></p>
+<p>用记事本的方式点开id_rsa.pub文件，全部复制</p>
+<p>打开GitHub</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051201465.png" alt="Snipaste_2021-10-05_12-01-42"></p>
+<p>进入头像下的设置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051202057.png" alt="Snipaste_2021-10-05_12-02-33"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051203273.png" alt="Snipaste_2021-10-05_12-03-29"></p>
+<p>点击New SSH key添加SSH</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051204223.png" alt="Snipaste_2021-10-05_12-04-29"></p>
+<p>Title随便写，将刚才复制的内容粘贴到key中，点击Add SSH key，SSH添加成功</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com
+</code></pre>
+<p>使用该命令查看是否成功添加，若成功添加则会出现下面的描述</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051215954.png" alt="Snipaste_2021-10-05_12-15-43"></p>
+<ul>
+<li><p>将Hexo部署到GitHub</p>
+<p>打开myblog文件夹中的_config.yml文件，拉到最后，将最后的信息修改为</p>
+</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash">deploy:
+  type: <span class="token function">git</span>
+  repo: git@github.com:YourgithubName/YourgithubName.github.io.git
+  branch: main
+</code></pre>
+<p>因为GitHub将之前的master分支改为main，所以这里的branch也更改为main，不影响使用</p>
+<p>rope项在GitHub里复制，进入建好的仓库</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051220414.png" alt="Snipaste_2021-10-05_12-20-05"></p>
+<p>点击Code-SSH</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202110051221506.png" alt="Snipaste_2021-10-05_12-20-54"></p>
+<p>将其完整的复制下来即可。注：修改信息每个分号前都有一个空格，若没有将会导致部署失败</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save
+</code></pre>
+<p>在myblog文件夹中右键git bash运行此命令，安装deploy-git，这样才能使用部署命令部署到GitHub</p>
+<pre class=" language-bash"><code class="language-bash">hexo clean
+hexo g
+hexo d
+</code></pre>
+<p>最后运行这三个命令进行部署，每次对博客进行修改后都需要重新上传部署，依然使用这三个命令</p>
+<p>至此基于Hexo+GitHub的博客搭建完毕。</p>
 
                 
             </div>
