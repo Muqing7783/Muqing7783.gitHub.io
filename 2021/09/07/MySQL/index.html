@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL, MuQing’s Blog - 月亮看我一眼吧">
+    <meta name="keywords" content="MySQL学习笔记, MuQing’s Blog - 月亮看我一眼吧">
     <meta name="description" content="穆如清风">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL | MuQing’s Blog - 月亮看我一眼吧</title>
+    <title>MySQL学习笔记 | MuQing’s Blog - 月亮看我一眼吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MySQL</h1>
+                    <h1 class="description center-align post-title">MySQL学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-03
+                    2021-10-06
                 </div>
                 
 
@@ -478,7 +478,117 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="MySQL常用语句"><a href="#MySQL常用语句" class="headerlink" title="MySQL常用语句"></a>MySQL常用语句</h1><h2 id="1-刷新权限"><a href="#1-刷新权限" class="headerlink" title="1.刷新权限"></a>1.刷新权限</h2><pre class=" language-Sql"><code class="language-Sql">fjak
+                <h1 id="MySQL常用语句"><a href="#MySQL常用语句" class="headerlink" title="MySQL常用语句"></a>MySQL常用语句</h1><h2 id="一-、命令"><a href="#一-、命令" class="headerlink" title="一 、命令"></a>一 、命令</h2><p>刷新权限</p>
+<pre class=" language-sql"><code class="language-sql">flush <span class="token keyword">privileges</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--刷新权限</span>
+mysql <span class="token operator">-</span>u <span class="token operator">-</span>p <span class="token comment" spellcheck="true">--链接数据库</span>
+
+<span class="token keyword">update</span> mysql<span class="token punctuation">.</span><span class="token keyword">user</span> <span class="token keyword">set</span> authenication_string<span class="token operator">=</span>password<span class="token punctuation">(</span><span class="token string">'123456'</span><span class="token punctuation">)</span> <span class="token keyword">where</span> <span class="token keyword">user</span><span class="token operator">=</span><span class="token string">'root'</span> <span class="token operator">and</span> Host <span class="token operator">=</span> <span class="token string">'localhost'</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">--修改用户密码</span>
+<span class="token keyword">show</span> <span class="token keyword">databases</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--查看所有数据库</span>
+
+mysql<span class="token operator">></span> <span class="token keyword">use</span> 数据库名 <span class="token comment" spellcheck="true">--切换数据库use数据库</span>
+<span class="token keyword">Database</span> changed
+
+<span class="token keyword">show</span> <span class="token keyword">tables</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--查看数据库中的所有表</span>
+<span class="token keyword">describe</span> student<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--显示数据库中所有的表的信息</span>
+
+<span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--创建一个数据库</span>
+
+<span class="token keyword">exit</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--推出链接</span>
+
+DDL <span class="token comment" spellcheck="true">--数据库定义语言</span>
+DML <span class="token comment" spellcheck="true">--数据库操作语言</span>
+DQL <span class="token comment" spellcheck="true">--数据库查询语言*</span>
+DCL <span class="token comment" spellcheck="true">--数据库控制语言</span>
+</code></pre>
+<h2 id="二、操作数据库"><a href="#二、操作数据库" class="headerlink" title="二、操作数据库"></a>二、操作数据库</h2><p>操作数据库&gt;操作数据库中的表&gt;操作数据库中表的数据</p>
+<p>==mysql中的关键字不区分大小写==</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">--创建数据库</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token punctuation">[</span><span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span><span class="token punctuation">]</span> 数据库名<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--[]内的内容为可选</span>
+<span class="token comment" spellcheck="true">--删除数据库</span>
+<span class="token keyword">DROP</span> <span class="token keyword">DATABASE</span> <span class="token punctuation">[</span><span class="token keyword">IF</span> <span class="token keyword">EXISTS</span><span class="token punctuation">]</span> 数据库名<span class="token punctuation">;</span>
+使用数据库
+<span class="token comment" spellcheck="true">--tab键的上面，如果你的名字或是字段是一个特殊的字符，就需要加上``</span>
+<span class="token keyword">USE</span> <span class="token punctuation">`</span>数据库名<span class="token punctuation">`</span>
+<span class="token comment" spellcheck="true">--查看数据库</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">DATABASES</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="学习思路："><a href="#学习思路：" class="headerlink" title="学习思路："></a>学习思路：</h3><ul>
+<li>对照sqlyog可视化历史记录查看sql</li>
+<li>固定的语法或关键字必须要强行记住</li>
+</ul>
+<h2 id="三、数据库的列类型"><a href="#三、数据库的列类型" class="headerlink" title="三、数据库的列类型"></a>三、数据库的列类型</h2><blockquote>
+<p>数值</p>
+</blockquote>
+<ul>
+<li>tinyint       十分小的数据    1字节</li>
+<li>smallint    较小的数据        2字节</li>
+<li>mediumint  中等大小的数据   3个字节</li>
+<li>int              标准的数据        4个字节</li>
+<li>bigint         较大的数据        8个字节</li>
+<li>float           浮点数                4个字节</li>
+<li>double       浮点数                8个字节（精度问题）</li>
+<li>decimal     字符串类型的浮点数   金融计算的时候，一般是使用decimal</li>
+</ul>
+<blockquote>
+<p>字符串</p>
+</blockquote>
+<ul>
+<li>char         字符串固定的大小       0~255</li>
+<li>varchar     可变字符串                 0~65535   常用的   String</li>
+<li>tinytext      微型文本                    2^8-1</li>
+<li>text              文本串                      2^16-1   保存大文本</li>
+</ul>
+<blockquote>
+<p>时间日期</p>
+</blockquote>
+<ul>
+<li>date       YYYY-MM-DD日期格式</li>
+<li>time       HH：mm：ss时间格式</li>
+<li>datetime  YYYY-MM-DD HH：mm：ss  常用的时间格式</li>
+<li>timestamp  时间戳      1970.1.1到现在的毫秒数！</li>
+</ul>
+<blockquote>
+<p>null</p>
+</blockquote>
+<ul>
+<li>没有值，未知</li>
+<li>==注意,不要使用NULL进行运算，结果为NULL==</li>
+</ul>
+<h2 id="四、数据库的字段属性（重点）"><a href="#四、数据库的字段属性（重点）" class="headerlink" title="四、数据库的字段属性（重点）"></a>四、数据库的字段属性（重点）</h2><p>Unsigned:</p>
+<ul>
+<li>无符号的整数</li>
+<li>声明了该列不能为负数</li>
+</ul>
+<p>zerofill：</p>
+<ul>
+<li>0填充的</li>
+<li>不足的位数，使用0来填充，   int（3），输入一个5，填充为:005</li>
+</ul>
+<p>自增（anto_increate):</p>
+<ul>
+<li>通常理解为自增，自动在上一条记录的基础上+1（默认）</li>
+<li>通常用来设计唯一的主键~index，必须是整数类型</li>
+<li>可自定义设计主键的起始值和步长</li>
+</ul>
+<p>非空 NULL NOT NULL:</p>
+<ul>
+<li>假设设置为not null，如果不给其赋值就会报错！</li>
+<li>NULL，如果不填写值，默认就是null</li>
+</ul>
+<p>默认:</p>
+<ul>
+<li>设置默认的值</li>
+<li>sex，默认值为男，如果不能指定该列的值，则会有默认的值</li>
+</ul>
+<h2 id="五、创建数据库表"><a href="#五、创建数据库表" class="headerlink" title="五、创建数据库表"></a>五、创建数据库表</h2><p>comment添加注释</p>
+<p>格式</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">[</span><span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span><span class="token punctuation">]</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span>（
+    <span class="token punctuation">`</span>字段名<span class="token punctuation">`</span> 列类型 <span class="token punctuation">[</span>属性<span class="token punctuation">]</span> <span class="token punctuation">[</span>索引<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span>，
+    <span class="token punctuation">`</span>字段名<span class="token punctuation">`</span> 列类型 <span class="token punctuation">[</span>属性<span class="token punctuation">]</span> <span class="token punctuation">[</span>索引<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span>，
+    <span class="token punctuation">`</span>字段名<span class="token punctuation">`</span> 列类型 <span class="token punctuation">[</span>属性<span class="token punctuation">]</span> <span class="token punctuation">[</span>索引<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span>，
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">`</span>字段名<span class="token punctuation">`</span> 列类型 <span class="token punctuation">[</span>属性<span class="token punctuation">]</span> <span class="token punctuation">[</span>索引<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span>
+<span class="token punctuation">)</span><span class="token punctuation">[</span>表类型<span class="token punctuation">]</span> <span class="token punctuation">[</span>字符集设置<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span>
 </code></pre>
 
                 
