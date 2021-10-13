@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL学习笔记, MuQing’s Blog - 月亮看我一眼吧">
+    <meta name="keywords" content="MySQL学习笔记, MuQing&#39;s Blog - 月亮看我一眼吧">
     <meta name="description" content="穆如清风">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL学习笔记 | MuQing’s Blog - 月亮看我一眼吧</title>
+    <title>MySQL学习笔记 | MuQing&#39;s Blog - 月亮看我一眼吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -43,7 +43,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">MuQing’s Blog - 月亮看我一眼吧</span>
+                    <span class="logo-span">MuQing&#39;s Blog - 月亮看我一眼吧</span>
                 </a>
             </div>
             
@@ -119,11 +119,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/friends" class="waves-effect waves-light">
+    <a href="/Windows" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>友情链接</span>
+      <span>Windows</span>
     </a>
     
   </li>
@@ -142,7 +142,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">MuQing’s Blog - 月亮看我一眼吧</div>
+        <div class="logo-name">MuQing&#39;s Blog - 月亮看我一眼吧</div>
         <div class="logo-desc">
             
             穆如清风
@@ -222,11 +222,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/friends" class="waves-effect waves-light">
+		<a href="/Windows" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			友情链接
+			Windows
 		</a>
           
         </li>
@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-06
+                    2021-10-09
                 </div>
                 
 
@@ -590,6 +590,105 @@ DCL <span class="token comment" spellcheck="true">--数据库控制语言</span>
     <span class="token punctuation">`</span>字段名<span class="token punctuation">`</span> 列类型 <span class="token punctuation">[</span>属性<span class="token punctuation">]</span> <span class="token punctuation">[</span>索引<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span>
 <span class="token punctuation">)</span><span class="token punctuation">[</span>表类型<span class="token punctuation">]</span> <span class="token punctuation">[</span>字符集设置<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span>
 </code></pre>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">SHOW</span> <span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token punctuation">`</span>数据库名<span class="token punctuation">`</span> <span class="token comment" spellcheck="true">--查看创建该数据库的语句</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> <span class="token comment" spellcheck="true">--查看该表的定义语句</span>
+<span class="token keyword">DESC</span> <span class="token comment" spellcheck="true">--显示表的结构</span>
+</code></pre>
+<h3 id="关于数据库的引擎"><a href="#关于数据库的引擎" class="headerlink" title="关于数据库的引擎"></a>关于数据库的引擎</h3><p>INNODB 默认使用的</p>
+<p>MYISAM 早些年使用的</p>
+<p>区别：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>MYISAM</th>
+<th>INNODB</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>事务支持</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>数据行锁定</td>
+<td>不支持  表锁</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>外键约束</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>全文索引</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>表空间的大小</td>
+<td>较小</td>
+<td>较大 约为2倍</td>
+</tr>
+</tbody></table>
+<p>常规使用操作：</p>
+<ul>
+<li>MYISAM   节约空间，速度较快</li>
+<li>INNODB   安全性高，事务的处理，多表多用户操作</li>
+</ul>
+<blockquote>
+<p>在物理空间存在的位置</p>
+</blockquote>
+<p>所有的数据库文件都存在data目录文件下，一个文件夹对应一个数据库</p>
+<p>本质还是文件的存储</p>
+<p>MySQL引擎在物理文件上的区别</p>
+<ul>
+<li><p>INNODB在数据库表中只有*.frm（文件类型），以及上级目录下的ibdara1文件</p>
+</li>
+<li><p>MYISAM对应文件</p>
+<ul>
+<li>*.frm   –表结构的定义文件</li>
+<li>*.MYD 数据文件（data） </li>
+<li>*.MYI  索引文件（index）</li>
+</ul>
+<blockquote>
+<p>设置数据库表的字符集编码</p>
+</blockquote>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">CHARSET</span><span class="token operator">=</span>UTF8
+</code></pre>
+<p>​    不设置的话，回事MySQL默认的字符集编码，不支持中文</p>
+<p>​    可以在my.ini(MySQL核心文件)中修改默认字符集，使其支持中文，但是不建议更改</p>
+</li>
+</ul>
+<h2 id="六、修改删除表"><a href="#六、修改删除表" class="headerlink" title="六、修改删除表"></a>六、修改删除表</h2><p>修改表</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> <span class="token keyword">RENAME</span> <span class="token keyword">AS</span> <span class="token punctuation">`</span>修改的名字<span class="token punctuation">`</span>
+</code></pre>
+<p>增加表的字段</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> <span class="token keyword">ADD</span> 字段名 列属性
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> <span class="token keyword">ADD</span> age <span class="token keyword">INT</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>
+</code></pre>
+<p>修改表的字段（重命名，修改约束）</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> <span class="token keyword">MODIFY</span> age <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">--修改约束</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> CHANGE age age1 <span class="token keyword">INT</span>（<span class="token number">1</span>） <span class="token comment" spellcheck="true">--字段重命名</span>
+</code></pre>
+<p>change用来字段重命名，不能修改字段类型和约束；</p>
+<p>modify不能用来字段重命名，只能修改字段类型和约束 </p>
+<p>删除表的字段</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> <span class="token keyword">DROP</span> <span class="token punctuation">`</span>字段名<span class="token punctuation">`</span>
+</code></pre>
+<p>删除表</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> <span class="token punctuation">`</span>表名<span class="token punctuation">`</span> （如果表存在，则删除）
+</code></pre>
+<p>所有的创建和删除尽量加上判断，以免报错</p>
+<p>注意点：</p>
+<ul>
+<li>``字段名，使用这个包裹</li>
+<li>注释： – /**/</li>
+<li>sql关键字大小写不敏感，建议小写</li>
+<li>所有符号全部英文</li>
+</ul>
+<h2 id="七、数据管理"><a href="#七、数据管理" class="headerlink" title="七、数据管理"></a>七、数据管理</h2><p>外键了解即可</p>
+<p>DML语言全部记住</p>
 
                 
             </div>
@@ -1207,7 +1306,7 @@ DCL <span class="token comment" spellcheck="true">--数据库控制语言</span>
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: MuQing’s Blog - 月亮看我一眼吧<br />'
+            + '来源: MuQing&#39;s Blog - 月亮看我一眼吧<br />'
             + '文章作者: 穆清<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
