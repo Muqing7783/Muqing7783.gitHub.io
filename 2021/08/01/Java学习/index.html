@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-03
+                    2021-10-23
                 </div>
                 
 
@@ -487,6 +487,99 @@
 <li><p>包机制</p>
 </li>
 </ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JAVA</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//main方法（函数）</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">long</span> num <span class="token operator">=</span> 30L<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//long类型的数据要在数据后加一个大写的L</span>
+        <span class="token keyword">float</span> num2 <span class="token operator">=</span> <span class="token number">40.1F</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//float类型数据要在数据后加一个大写的F，用于数据区分</span>
+        <span class="token keyword">double</span> num3 <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//String 是一个类</span>
+
+        <span class="token comment" spellcheck="true">//布尔值：</span>
+        <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//boolean flag = false;</span>
+        String 中文 <span class="token operator">=</span> <span class="token string">"菜鸟不菜"</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>中文<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">//JAVAdoc 文档注释   </span><span class="token comment" spellcheck="true">/**回车
+
+/**
+ * 强类型语言必须先定义，后使用
+ *
+ *进制：八进制0开头；十六进制0x开头
+ *浮点数
+ */</span>
+<span class="token keyword">int</span> n<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n1<span class="token operator">=</span><span class="token number">010</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n2<span class="token operator">=</span><span class="token number">0x10</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"*******"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"*******"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">float</span> f<span class="token operator">=</span><span class="token number">0.1f</span><span class="token punctuation">;</span>
+        <span class="token keyword">double</span> m <span class="token operator">=</span> <span class="token number">0.1</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>f<span class="token operator">==</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//判断两个数是否相等，相等即为true，反之为false</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//舍入误差</span>
+        <span class="token comment" spellcheck="true">//最好完全避免使用浮点数进行比较</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"*************"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//字符串</span>
+        <span class="token keyword">char</span> c1 <span class="token operator">=</span> <span class="token string">'p'</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span> c2<span class="token operator">=</span><span class="token string">'中'</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> c1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> c2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//强制类型转换 ASCLL</span>
+        <span class="token keyword">char</span> c3 <span class="token operator">=</span> <span class="token string">'\u0061'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//转义</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//转义字符</span>
+        <span class="token comment" spellcheck="true">//\t  制表符（空格）</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"HELLO \t world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//\n 换行</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello\nworld"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"*************"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//类型转换</span>
+        <span class="token comment" spellcheck="true">//强制转换   高到低</span>
+        <span class="token comment" spellcheck="true">//自动转换   低到高</span>
+
+        <span class="token comment" spellcheck="true">//类变量：要在前面加上static，位置与实例变量一样</span>
+        <span class="token comment" spellcheck="true">//实例变量（在类里面，方法的外面）从属于对象，不用初始化赋值，不赋值则输出默认值</span>
+        <span class="token comment" spellcheck="true">//布尔值默认是false</span>
+        <span class="token comment" spellcheck="true">//局部变量在方法里面，变量应用范围小（类似于函数中定义变量），必须声明和初始化值</span>
+        <span class="token comment" spellcheck="true">//常量 final double PI = 3.14;</span>
+
+
+        <span class="token comment" spellcheck="true">//位运算：与二进制有关（效率极高）</span>
+        <span class="token comment" spellcheck="true">//       &amp;    与    两个位都为1时，结果才为1</span>
+        <span class="token comment" spellcheck="true">//       |    或    两个位都为0时，结果才为0</span>
+        <span class="token comment" spellcheck="true">//       ^    异或    两个位相同为0，相异为1</span>
+        <span class="token comment" spellcheck="true">//       ~    取反    0变1，1变0</span>
+        <span class="token comment" spellcheck="true">//       &lt;&lt;    左移    相当于乘以2   各二进位全部左移若干位，高位丢弃，低位补0</span>
+        <span class="token comment" spellcheck="true">//       >>    右移    相当于除以2   各二进位全部右移若干位，对无符号数，高位补0，有符号数，各编译器处理方法不一样，有的补符号位（算术右移），有的补0（逻辑右移）</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">&lt;&lt;</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> l<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> s<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//字符串连接符</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">""</span> <span class="token operator">+</span> l <span class="token operator">+</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//链接两个数并不相加，只能在前面，运算的前后顺序</span>
+        <span class="token keyword">int</span> x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">;</span>
+        x<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        y<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+        z<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">""</span> <span class="token operator">+</span> x <span class="token operator">+</span> y <span class="token operator">+</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
 
                 
             </div>
