@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-04
+                    2022-01-15
                 </div>
                 
 
@@ -652,6 +652,154 @@ p<span class="token attribute">[属性 = 属性值]</span></span><span class="to
 <pre class=" language-css"><code class="language-css"><span class="token punctuation">:</span><span class="token function">not</span><span class="token punctuation">(</span><span class="token punctuation">)</span>否定伪类
 将符合条件的元素从选择器中q
 </code></pre>
+<h3 id="超链接的伪类"><a href="#超链接的伪类" class="headerlink" title="超链接的伪类"></a>超链接的伪类</h3><p>在使用超链接的时候，访问过的链接会从蓝色变成紫色，可以使用a的伪类进行设置</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:link</span></span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+//link表示没有访问过的链接（正常的链接）
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:visited</span></span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span>orange<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+//visited表示没有访问过的链接，由于隐私的原因，所以visited只能修改链接的颜色，其他的都不能改
+</code></pre>
+<p>：hover表示鼠标移入的一个状态</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:hover</span></span><span class="token punctuation">{</span>
+    样式设置
+<span class="token punctuation">}</span>
+</code></pre>
+<p>：active用来表示鼠标点击变换的样式</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:sctive</span></span><span class="token punctuation">{</span>
+    点击时会变换的样式
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h3><p>伪元素：表示页面中一些特殊的并不真实存在的元素（特殊的位置）</p>
+<p>伪元素的开头：:</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">p<span class="token pseudo-element">::first-letter</span>(表示第一个字母)</span><span class="token punctuation">{</span>
+   样式语句
+<span class="token punctuation">}</span>
+<span class="token selector">p<span class="token pseudo-element">::first-line</span>(表示第一个行)</span><span class="token punctuation">{</span>
+   
+<span class="token punctuation">}</span>
+<span class="token selector">p<span class="token pseudo-element">::selection</span>(表示选中的文字)</span><span class="token punctuation">{</span>
+   
+<span class="token punctuation">}</span>
+<span class="token selector">p<span class="token pseudo-element">::before</span>(表示标签元素的开始)</span><span class="token punctuation">{</span>
+   
+<span class="token punctuation">}</span>
+<span class="token selector">p<span class="token pseudo-element">::after</span>(表示标签元素的结束)</span><span class="token punctuation">{</span>
+   
+<span class="token punctuation">}</span>
+</code></pre>
+<p>before和after元素必须结合content使用，而且通过这两个添加的东西无法选中，因为时通过css添加的</p>
+<h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>  并不是所有的样式都会被继承，如：背景相关的，布局相关等的样式都不会被继承</p>
+<h3 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h3><p>解决样式冲突</p>
+<p>当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值时</p>
+<p>发生样式冲突时，有选择器的权重（优先级）决定</p>
+<p>越精确优先级越高</p>
+<p>内联样式 &gt; id选择器 &gt; 类和伪类选择器 &gt; 元素选择器 &gt; 通配选择器（*） &gt; 继承的样式 （没有优先级）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202201082001508.png" alt="Snipaste_2022-01-08_20-00-46"></p>
+<p>可以在某一个样式的后面添加！important，则此时会获取到最高的优先级，甚至超过内联样式</p>
+<h3 id="像素和百分比"><a href="#像素和百分比" class="headerlink" title="像素和百分比"></a>像素和百分比</h3><p> 长度单位：</p>
+<h4 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h4><p>同样的200px在不同的设备下显示效果不一样</p>
+<h4 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h4><p>可以将属性值设置为相对于父元素属性的百分比</p>
+<p>设置百分比可以使子元素跟随父元素的改变而改变</p>
+<h4 id="em"><a href="#em" class="headerlink" title="em"></a>em</h4><p>一般浏览器默认的字体大小是16px</p>
+<p>em是相对于元素的字体大小来计算的</p>
+<p>1em=1font-size</p>
+<p> 现阶段以像素为主</p>
+<h4 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h4><p>是相对于根元素的字体大小来计算的（html的font-size）</p>
+<h3 id="颜色单位"><a href="#颜色单位" class="headerlink" title="颜色单位"></a>颜色单位</h3><p>在CSS中可以直接使用颜色名来设置颜色</p>
+<p>RGB</p>
+<p>RGBA</p>
+<p>就是在RGB的基础上增加了一个a表示不透明度</p>
+<p>需要四个值，前三个值和RGB一样，第四个值表示不透明度</p>
+<p>1表示完全不透明   0表示完全透明    .5半透明</p>
+<p>十六进制的RGB值抹茶绿bbffaa</p>
+<p>HSL值</p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><p>文档流 ：</p>
+<p>网页是一个 多层的结构，一层摞着一层，通过CSS可以分别为每一层来设置样</p>
+<p>式，作为用户来讲只能看到最顶上一层，最底下的一层称为文档流，文档流是网页的基础，我们所创建的元素默认都是在文档流中进行排列</p>
+<p>对于元素主要有两个状态</p>
+<p>在文档流中和不在文档流中</p>
+<p>元素在文档流中有什么特点：</p>
+<p>块元素：会在页面中独占一行，默认宽度是父元素的全部（会把父元素填满），默认高度是被内容撑开</p>
+<p>行内元素：不会独占一行，只占自身大小，行内元素在页面中自左向右水平排列，如果一行之中不能容纳下所有的行内元素，则元素会换到第二行继续自左向右排列（书写习惯一致）</p>
+<p>行内元素的默认宽度和高度都是被内容撑开</p>
+<h3 id="盒模型："><a href="#盒模型：" class="headerlink" title="盒模型："></a>盒模型：</h3><p>CSS将页面中的所有元素都设置为了一个矩形的盒子</p>
+<p>将元素设置为矩形的盒子后，对页面的布局就变成将不同的盒子摆放到不同的位置</p>
+<p>每一个盒子都有以下几个部分组成：</p>
+<h5 id="内容区（contnet）"><a href="#内容区（contnet）" class="headerlink" title="内容区（contnet）"></a>内容区（contnet）</h5><p> 元素中的所有子元素和文本内容都在内容区中排列，内容区的大小有width和height两个属性来设置</p>
+<p>width 设置内容区的宽度</p>
+<p>height 设置内容区的高度</p>
+<h5 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h5><p>内容区和边框之间的距离是内边距 </p>
+<p>一共有四个方向的内边距:</p>
+<p>padding-top</p>
+<p>padding-right</p>
+<p>padding-bottom</p>
+<p>padding-left</p>
+<p>内边距的设置会影响到盒子的大小，背景颜色会延申到内边距上</p>
+<p>padding的简写属性，可以同时指定四个方向的内边距规则和border-width一一样</p>
+<h5 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h5><p>边框的大小会影响到整个盒子的大小</p>
+<p> 边框属于盒子边缘，边框里面属于盒子内部，出了边框都是盒子的外部，要设置边框，需要至少设置三个颜色样式：</p>
+<p>边框的宽度：border-width（默认值，一般都是三个像素）指定四个方向的边框宽度</p>
+<p>值的情况：</p>
+<p>四个值：上、右、下、左（顺时针）</p>
+<p>三个值：上、左右、下</p>
+<p>两个值：上下、左右</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">border-width</span><span class="token punctuation">:</span><span class="token number">10</span>px <span class="token number">20</span>px <span class="token number">30</span>px <span class="token number">40</span>px
+</code></pre>
+<p>除了border-width还有一组border-xxx-width</p>
+<p>xxx可以是：top right bottom left</p>
+<p>边框的颜色：border-color</p>
+<p>用来指定边框的颜色，同样可以分别指定四个边的边框，规则和border-width一样</p>
+<p>边框的样式：border-style（虚线、实线等）</p>
+<p>solid表示实线</p>
+<p>dotted点状虚线</p>
+<p>ddashe 虚线</p>
+<p>double双线</p>
+<p>border简写属性：通过该属性可以同时设置所有的相关样式，并且没有顺序要求</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">border</span><span class="token punctuation">:</span> solid <span class="token number">10</span>px red<span class="token punctuation">;</span>
+<span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">10</span>px solid red<span class="token punctuation">;</span>//只设置一条边用的少
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">10</span>px red solid<span class="token punctuation">;</span>//与上面只设置一条边的一样
+border-right：none<span class="token punctuation">;</span>
+</code></pre>
+<h5 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h5><p>外边距不会影响盒子可见框的大小，但是外边距会影响盒子的位置</p>
+<p>一共有四个方向的外边距</p>
+<p>margin-top:<br>margin-right:<br>margin-left:<br>margin-bottom: </p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202201111948247.png" alt="Snipaste_2022-01-11_19-48-19"></p>
+<p> 如果两个外边距设置为auto，宽度固定值，则会将外边距设置为相同的，所以我们经常利用这个特点来使一个元素在其父元素中水平居中</p>
+<p> 默认情况下父元素的高度被内容撑开，子元素内容有多高，父元素就有多高</p>
+<p>子元素是在父元素的内容区中排列的，如果子元素超过了父元素，则子元素会从父元素中溢出，父元素不变</p>
+<p>解决：使用overflow属性来设置父元素如何处理溢出的子元素</p>
+<p>overflow可选值：visible 默认值，子元素会从父元素中溢出，在父元素外部显示</p>
+<p>hidden：溢出内容将会被不会显示</p>
+<p>scroll：生成两条滚动条，来显示完整内容</p>
+<p>auto：根据需要生成滚动条</p>
+<p>overflow-x     overflow-y</p>
+<p>外边距的重叠（折叠）</p>
+<p>相邻的垂直方向外边距会发生外边距重叠的现象</p>
+<p>兄弟元素间的相邻垂直外边距会取两者之间的较大值（都是正值）</p>
+<p>父子元素间相邻外边距，子元素的会传递给父元素（上外边距）</p>
+<p>解决：padding-top/边框1像素</p>
+<p>行内元素不支持设置宽度和高度，行内元素可以设置padding但是垂直方向不会影响页面的布局，border、margin同理</p>
+<p>display用来设置元素显示的类型</p>
+<p>可选值：inline将元素设置为行内元素</p>
+<p>block将元素设置为块元素</p>
+<p>inline-block将元素设置为行内块元素，行内块，既可以设置宽度和高度又不会独占一行</p>
+<p>table将元素设置为一个表格</p>
+<p>none元素不在页面中显示</p>
+<p>visibility用来设置元素的显示状态</p>
+<p>可选值：visible默认值，在页面中正常显示</p>
+<p>hidden 元素在页面中隐藏，但是任然占据页面位置</p>
+<h3 id="默认样式"><a href="#默认样式" class="headerlink" title="默认样式"></a>默认样式</h3><p>通常情况下，浏览器都会为元素设置一些默认样式</p>
+<p>默认样式的存在会影响到页面的布局，通常情况下必须要去除浏览器的默认样式</p>
+<p>盒子是外边距存在默认样式，需要找到父元素进行更改为0</p>
+<p>list-style:none去除项目符号，即点</p>
+<p>手动写代码清楚样式表太麻烦，导入重置样式表，通过link引入</p>
+<p>reset.css直接去除了浏览器的默认样式</p>
+<p>normalize.css对默认样式进行了统一</p>
 
                 
             </div>
@@ -1469,7 +1617,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <span id="year">2021</span>
             <a href="/about" target="_blank">穆清</a>
