@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-15
+                    2022-02-04
                 </div>
                 
 
@@ -653,7 +653,43 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">//遍历数组的元素</span>
 </code></pre>
-<h3 id="方法详解"><a href="#方法详解" class="headerlink" title="方法详解"></a>方法详解</h3>
+<h3 id="方法详解-相当于C-的函数"><a href="#方法详解-相当于C-的函数" class="headerlink" title="方法详解(相当于C++的函数)"></a>方法详解(相当于C++的函数)</h3><p> System.out.println()；</p>
+<h3 id="类-对象-方法"><a href="#类-对象-方法" class="headerlink" title="类/对象/方法"></a>类/对象/方法</h3><p>Java方法是语句的集合，他们在一起执行一个功能</p>
+<p>​    方法是解决一类问题大的步骤的有序组合</p>
+<p>​    方法包含于类或对象中</p>
+<p>​    方法在程序中被创建，在其他地方被引用</p>
+<p>一个方法只完成一个功能 </p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202202031522504.png" alt="Snipaste_2022-02-03_15-22-01"></p>
+<h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><p>方法的名字不同，方法名相同，数据类型不同，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202202031543994.png" alt="Snipaste_2022-02-03_15-43-02"></p>
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>JDK1.5开始，Java支持传递同类型的可变参数给一个方法</p>
+<p>在方法声明中，在指定参数类型后加一个省略号（…）</p>
+<p>一个方法中只能指定一个可变参数，它必须是方法的最后一个参数，任何普通的参数必须在它之前声明</p>
+<h3 id="递归："><a href="#递归：" class="headerlink" title="递归："></a>递归：</h3><p>递归头：什么时候不调用自身方法，如果没有头，将陷入死循环</p>
+<p>递归体：什么时候需要调用自身方法</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>数组是相同类型数据的有序集合</p>
+<p>数组描述的是相同类型的若干个数据，按照一定的先后次序排列组合而成</p>
+<p>其中，每一个数据称作一个数组元素，每个数组元素可以通过一个下表来访问他们</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//定义,首选</span>
+<span class="token keyword">int</span> nums<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+nums <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//创建一个数组</span>
+nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>；<span class="token comment" spellcheck="true">//赋值</span>
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202202041455431.png" alt="Snipaste_2022-02-04_14-55-02"></p>
+<h4 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h4><p>打印数组元素Arrays.toString（） </p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202202041636305.png" alt="Snipaste_2022-02-04_16-36-38"></p>
+<p>稀疏数组</p>
+
                 
             </div>
             <hr/>

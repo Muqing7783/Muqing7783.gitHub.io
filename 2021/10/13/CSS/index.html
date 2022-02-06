@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-15
+                    2022-01-23
                 </div>
                 
 
@@ -800,6 +800,353 @@ border-right：none<span class="token punctuation">;</span>
 <p>手动写代码清楚样式表太麻烦，导入重置样式表，通过link引入</p>
 <p>reset.css直接去除了浏览器的默认样式</p>
 <p>normalize.css对默认样式进行了统一</p>
+<p>要让一个文字在父元素中垂直居中，只需要将父元素的line-height设置为一个和父元素height一样的值，文字上下居中</p>
+<p>尽量所有的元素都用标签给包起来，不裸露 </p>
+<p>/的字体小于文字的大小，一般小上两个像素</p>
+<p>去除下划线</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+</code></pre>
+<p>设置上边框</p>
+<pre class=" language-css"><code class="language-css">border-top：<span class="token number">1</span>px solid color
+</code></pre>
+<p>为了边框和文字的宽度一致，需要将h2转换为行内块元素</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">display</span><span class="token punctuation">:</span>inline-block 
+</code></pre>
+<p>字体加粗</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">font-weight</span><span class="token punctuation">:</span>bold<span class="token punctuation">;</span>
+</code></pre>
+<p>将文字放在图片上，下将文字放在图片下面，在通过margin-top来调整</p>
+<p>通过before为伪元素，来为每一个li添加项符号</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">li：：before</span><span class="token punctuation">{</span>
+    content：要加的
+    还能继续设置样式
+<span class="token punctuation">}</span>
+</code></pre>
+<p>默认情况下，盒子可见框的大小由内容区、内边距和边框共同决定的</p>
+<p>box-sizing 用来设置盒子尺寸的计算方式（设置widthheheight的作用）</p>
+<p>可选值：content-box默认值，宽度和高度用来设置内容区的大小</p>
+<p>border-box宽度和高度用来设置整个盒子的可见框的大小</p>
+<p>width和height指的是内容区和内边距和边框的总大小</p>
+<p>轮廓</p>
+<p>outline用来设置元素的轮廓线，用法和border一样</p>
+<p>轮廓线和边框不同的点，就是轮廓不会影响到可见框的大小</p>
+<p>box-shadow用来设置元素的阴影效果，阴影不会印象页面布局</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">box-shadow</span><span class="token punctuation">:</span><span class="token number">10</span>px <span class="token number">10</span>px color
+</code></pre>
+<p>第一个值 水平偏移量 设置阴影的水平位置 正值向右移动 负值反之</p>
+<p>第二个值 垂直偏移量 设置阴影的水平位置 正值向下移动 负值反之</p>
+<p>第三个值 阴影的模糊半径 </p>
+<p>第四个值 阴影的颜色</p>
+<p>圆角</p>
+<p>border-radius用来设置圆角,圆角设置的圆的半径大小</p>
+<p>border-top-left-radius</p>
+<p>border-top-right-radius</p>
+<p>border-bottom-left-radius</p>
+<p>border-bottom-right-radius</p>
+<p>一个值是以圆来画圆角，两个值是以椭圆来画圆角（指定那个角top left等）</p>
+<p>四个值就是顺时针旋转的角顺序，从左上角开始</p>
+<p>border-radius可以分别指定四个角的圆角</p>
+<p>四个值  左上 右下 右下 左下</p>
+<p>三个值 左上 右下/左下 右下</p>
+<p>两个值 左上/右下  右上/左下</p>
+<p>将元素设置为圆形，四个值设置为50%</p>
+<p>浮动模型</p>
+<p>通过浮动可以使一个元素向其父元素的左侧或右侧移动</p>
+<p>使用float属性来设置于元素的浮动</p>
+<p>可选值：none，元素不浮动</p>
+<p>left元素向左浮动</p>
+<p>right元素向右浮动</p>
+<p>元素设置浮动以后，水平布局的等式便不需要强制成立</p>
+<p>元素设置浮动以后，会完全从文档流中脱离，不在占用文档流的位置，所以元素下边的还在文档流中的元素会自动向上移动</p>
+<p>多个盒子水平排列，需要将其全部设置为浮动布局</p>
+<p>特点总结：1、浮动元素会脱离文档流，不在占据文档流中的位置</p>
+<p>2、设置浮动以后元素会向父元素的左侧或右侧移动</p>
+<p>3、浮动元素默认不会从父元素中移出</p>
+<p>4、浮动元素向左或是向右移动时，不会超过它前面的其他浮动元素</p>
+<p>5、如果浮动元素的上边是一个没有浮动元素的块元素，则浮动元素无法上移</p>
+<p>6、浮动元素不会超过它上边的浮动的兄弟元素，最多最多就是和他一样高</p>
+<p>其他特点：浮动元素不会盖住文字，文字环绕</p>
+<p>元素设置浮动以后，将会从文档流中脱离，从文档流中脱离后，元素的一些特点也会发生变化</p>
+<p>脱离了文档流的特点：快元素：1、块元素不在页面中独占一行</p>
+<p>2、脱离后，块元素的宽度和高度默认都被内容撑开</p>
+<p>行内元素：行内元素脱离后会变成块元素，特点和块元素一样</p>
+<p>脱离文档流后，不需要区分块元素和行内元素</p>
+<p>实际的开发中如果面临将行内元素设置为某一块元素的样式时，要将行内元素转换为块元素</p>
+<pre class=" language-css"><code class="language-css">&lt;header>&lt;header>//表示网页的头部
+&lt;main>&lt;main>//网页的主题，一个网页中只能有一个main标签
+&lt;footer>&lt;footer>//网页的底部
+
+//可以用div代替
+</code></pre>
+<h3 id="高度塌陷的问题"><a href="#高度塌陷的问题" class="headerlink" title="高度塌陷的问题"></a>高度塌陷的问题</h3><p> 在浮动布局中，父元素的高度默认是被子元素撑开的</p>
+<p>当子元素浮动以后，其会完全脱离文档流，子元素从文档流中脱离</p>
+<p>将会无法撑起父元素的高度，导致父元素的高度丢失，丢失以后，其下的元素会自动上移，导致页面布局的混乱</p>
+<p>解决：</p>
+<p>1、将父元素的高度写死（不建议）<br>2、BFC（Block Formatting Context）块级格式化环境<br>BFC是CSS中的一个隐含的属性，可以为一个元素开启BFC<br>开启后，该元素会变成一个独立的布局区域<br>开启后的特点：<br>1、开启BFC的元素不会被浮动元素所覆盖<br>2、开启BFC的元素子元素和父元素的外边距不会重叠<br>3、开启BFC的元素可以包含浮动的子元素</p>
+<p>可以通过一些特殊的方式来开启元素的BFC</p>
+<p>1、设置父元素的浮动（不推荐）</p>
+<p>2、将元素设置为行内块元素</p>
+<p>3、将元素的overflow设置为一个非visible（auto、hidden（常用））</p>
+<p>如果我们不希望某个元素因为其他元素浮动的影响而改变位置，可以通过clear属性来清除浮动元素对当前元素所产生的影响</p>
+<p>clear</p>
+<p>作用：清楚浮动元素对当前元素所产生的影响</p>
+<p>可选值：left清除左侧浮动元素对当前元素的影响</p>
+<p>right清除右侧浮动元素对当前元素的影响</p>
+<p>both清除两侧中最大影响的那侧</p>
+<p>原理：设置清除浮动以后，浏览器会自动为元素添加一个上外边距，以使其位置不受其他元素的影响（解决高度塌陷的问题）</p>
+<p>解决高度塌陷的最终方案</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202201191933883.png"></p>
+<p>解决父子元素的外边距同用问题</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202201191946338.png" alt="Snipaste_2022-01-19_19-46-16"></p>
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><p>是一种更加高级的布局手段</p>
+<p>通过定位可以将元素摆放到页面的任意位置</p>
+<p>使用position属性来设置定位</p>
+<p>可选值：static 默认值，元素是静止的没有开启定位，只要不是static都是开启position</p>
+<p>relative 开启相对定位</p>
+<p>absolute 开启元素的绝对定位</p>
+<p>fixed 开启元素额固定定位</p>
+<p>sticky 开启元素的粘滞定位</p>
+<h3 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h3><p>relative</p>
+<p>相对定位的特点：1、元素开启相对定位后，如果不设置偏移量元素不会发生任何的变化</p>
+<p>2、相对定位是参照于元素在文档流中的位置进行定位的</p>
+<p>3、相对定位会提升元素的层级</p>
+<p>4、相对定位不会使元素脱离文档流</p>
+<p>5、相对定位不会改变元素的性质块还是块，行内还是行内</p>
+<p>偏移量（offset）</p>
+<p>当元素开启定位后，可以通过偏移量来设置元素的位置</p>
+<p>top  </p>
+<p>定位元素和定位位置上边的距离</p>
+<p>bottom</p>
+<p>定位元素和定位位置下边的距离</p>
+<p>定位元素垂直方向的位置由top和bottom控制，一般只使用其中一个</p>
+<p>left</p>
+<p>左侧</p>
+<p>right</p>
+<p>右侧</p>
+<p>一般只使用其中一个</p>
+<h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>absolute，开启绝对定位</p>
+<p>特点：1、开启绝对定位后，如果不设置偏移量元素的位置不会发生变化</p>
+<p>2、开启绝对定位后，元素会从文档流中脱离</p>
+<p>3、绝对定位会改变元素的性质，块会变成行内，行内的宽高会被内容撑开</p>
+<p>4、绝对定位会使元素提升一个层级</p>
+<p>5、绝对定位元素是相对于其包含快进行定位的</p>
+<p>包含块（containing block）</p>
+<p>正常情况下：包含块就是当前元素最近的祖先块元素</p>
+<p>绝对定位的包含块：保安快就是离他最近的开启了定位的祖先元素，如果所有的祖先元素都没有开启定位则根元素就是他的包含块（html）   </p>
+<p>当我们开启了绝对定位以后：</p>
+<p>水平方向的布局等式就需要添加left和right两个值</p>
+<p>此时规则和之前一样只是多添加了两个值：当发生过度约束：如果九个值中没有auto则自动调整auto的值以使等式满足</p>
+<p>可设置auto的值</p>
+<p>margin width left right</p>
+<p>因为left和right的值默认是auto，所以如果不知道left和right则等式不满足时，会自动调整这两个值</p>
+<p>垂直方向布局的等式也必须满足</p>
+<h3 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h3><p>将元素的position属性设置为fixed则开启了元素的固定定位</p>
+<p>固定定位也是一种绝对定位，所以固定定位的大部分特点都和绝对定位一样</p>
+<p>唯一不同的是固定定位永远参照于浏览器的可视窗口进行定位</p>
+<p>固定定位的元素不会随网页的滚动条滚动</p>
+<h3 id="粘滞定位"><a href="#粘滞定位" class="headerlink" title="粘滞定位"></a>粘滞定位</h3><p>sticky，当元素的position属性设置为sticky是则开启了元素的粘滞定位</p>
+<p>粘滞定位和相对定位的特点基本一致</p>
+<p>不同的是粘滞定位可以在元素到达某一位置时将其固定</p>
+<p>兼容性不高，一般不适用这种方法来设置</p>
+<h3 id="元素的层级"><a href="#元素的层级" class="headerlink" title="元素的层级"></a>元素的层级</h3><p>对于开启了定位元素，可以通过z-index属性来指定元素的层级</p>
+<p>z-index需要一个整数作为一个整数作为参数，值越大元素的层级越高，越优先显示</p>
+<p>如果元素的层级一样，则优先显示靠下的元素</p>
+<p>祖先的元素的层级再高也不会盖住后代元素</p>
+<h2 id="字体族"><a href="#字体族" class="headerlink" title="字体族"></a>字体族</h2><p> 字体相关的样式</p>
+<p>color用来设置字体的大小</p>
+<p>和font-size相关的单位</p>
+<p>em相当于当前元素的一个font-size</p>
+<p>rem相当于根元素的一个font-size</p>
+<p>font-family字体族（格式）</p>
+<p>可选值：</p>
+<p>serif    衬线字体</p>
+<p>sans-serif   非衬线字体</p>
+<p>monospace 等宽字体</p>
+<p>指定字体的类别，浏览器会自动使用该类别下的字体</p>
+<p>可以同时指定多个字体，多个字体间使用，隔开字体生效时优先使用第一个，第一个无法使用则使用第二个，以此类推</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">'字体名字'</span>，  ，  
+</code></pre>
+<p>font-face可以将服务器中的字体直接提供给用户使用</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span><span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">'起名字'</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url()</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>问题：加载速度</p>
+<p>版权</p>
+<p>格式问题</p>
+<p>图标字体（iconfont）</p>
+<p>在网页中经常需要使用一些图标，可以使用图片来引入图标</p>
+<p>但是图片大小本身比较大，并且非常不灵活，所以在使用图标时，我们还可以将图标直接设置为字体，然后通过font-size的形式进行引入</p>
+<p>这样我们就可以通过使用字体的形式来使用图标</p>
+<p>推荐使用fontawesome</p>
+<p>使用步骤：下载web版fontasesome，解压，将CSS和webfonts两个文件夹移动到项目中，引入all.css引入到网页中</p>
+<p>使用：直接通过类名来使用字体</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202201201937237.png" alt="Snipaste_2022-01-20_19-37-21"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202201201940323.png" alt="Snipaste_2022-01-20_19-40-09"></p>
+<p>行高（line height）</p>
+<p>行高指的是文字占有的实际高度</p>
+<p>可以通过line-height来设置行高</p>
+<p>行高可以直接指定一个大小（px em）也可以则直接设置为一个整数</p>
+<p>如果是一个整数，行高捡回是字体的指定的倍数 </p>
+<p>font简写属性</p>
+<p>font可以设置字体相关的所有属性语法：font：字体大小/行高 字体族</p>
+<p>行高可以省略不写</p>
+<p>font-weight：字重，字体的加粗</p>
+<p>可选值：bold加粗   normal默认</p>
+<p>100-900九个级别（但是没什么用）</p>
+<p>font-style 字体的风格</p>
+<p>normal正常的   italic斜体</p>
+<p>文本样式：</p>
+<p>text-align 文本的水平对齐</p>
+<p>可选值：left左侧对其   right右侧对其    center  居中对齐   justify两端对齐</p>
+<p>vertical-align设置元素垂直对齐的方式</p>
+<p>可选值：</p>
+<p>baseline 默认值 基线对齐 top顶部对齐  bottom底部对齐  middle 居中对齐</p>
+<p>可用来解决图片等内容于盒子不贴合问题</p>
+<p>text-decoration设置文本修饰</p>
+<p>可选值：none无  underline 下划线  line-through 删除线</p>
+<p>overline 上划线</p>
+<p>white-space设置网页如何处理空白</p>
+<p>可选值：normal 正常  nowrap 不换行  pre 保留空白</p>
+<p>长文本只显示一部分其他的用省略号代替，代码如下：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box1</span></span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">white-space</span><span class="token punctuation">:</span>nowrap<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span>
+    <span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>background-color设置背景颜色</p>
+<p>设置背景图片background-image： url（）</p>
+<p>如果背景图片小于元素，则背景图片会自动在元素中平铺将元素铺满</p>
+<p>图片大于元素，将会一个部分背景无法完全显示</p>
+<p>一样大，则会正常显示</p>
+<p>设置背景的重复方式background-repeat</p>
+<p>可选值：repeat默认值，x，y双方向重复</p>
+<p>repeat-x  repeat-y  no-repeat不重复</p>
+<p>设置背景图片的位置</p>
+<p>background-position 通过top 、left、right、bottom、center来控制及具体的位置，必须同时指定两个值，只写一个第二个值默认是cneter</p>
+<p>还可以通过偏移量来控制</p>
+<p>设置背景的范围</p>
+<p>background-clip</p>
+<p>可选值： border-box 默认值，背景会出现在边框的下边</p>
+<p>padding-box 背景不会出现在边框，只出现在内容区和内边距</p>
+<p>content-box背景只会出现在内容区</p>
+<p>background-origin 背景图片的偏移量计算的原点</p>
+<p>padding-box 默认值，background-position从内边距处开始计算</p>
+<p>content-box背景图片从内容区处开始计算</p>
+<p>bordeer背景图片的变量从边框处开始计算</p>
+<p>设置背景图片的大小</p>
+<p>background-size 第一个值表示宽度，第二个值表示高度</p>
+<p>可选值：cover图片比例不变，将元素铺满</p>
+<p>contain比例不变，将图片在元素中完整显示</p>
+<p>background-attachment: 背景图片是否跟随元素移动</p>
+<p>scroll默认值，背景图片会跟随元素移动</p>
+<p>fixed背景会固定在页面中，不会随元素移动</p>
+<h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><p> 通过渐变可以设置一些复杂的背景颜色，可以实现从一个颜色向其他颜色过渡的效果</p>
+<p>渐变是图片，需要通过background-imge来设置</p>
+<p>线性渐变，颜色沿着一条直线发生变化    linear-gradient（）</p>
+<p> linear-gradient（red，yellow）红色在开头，黄色在结尾，中间是过渡区域</p>
+<p>线性渐变的开头，我们可以指定一个渐变的方向</p>
+<p>to left</p>
+<p>to right</p>
+<p>to bottom</p>
+<p>to top</p>
+<p>deg deg表示度数</p>
+<p>turn 表示圈</p>
+<p>渐变可以捅死指定多个颜色，多个颜色默认情况下平均分布，也可以手动指定渐变的分布情况</p>
+<p>repeating-linear-gradient（）可以平铺的线性渐变</p>
+<p>径向渐变（发散）radial-gradient（）</p>
+<p>默认情况下径向渐变的形状根据元素的形状来计算的</p>
+<p>正方型&gt;&gt;圆心</p>
+<p>长方形&gt;&gt;椭圆形</p>
+<p>我们也可以手动指定径向渐变的大小</p>
+<p>circle  ellipse </p>
+<p>也可以指定渐变的位置</p>
+<h2 id="弹性盒"><a href="#弹性盒" class="headerlink" title="弹性盒"></a>弹性盒</h2><p>flex（弹性盒）</p>
+<p>是CSS中的有一种布局手段，它主要用来代替浮动来完成页面的布局</p>
+<p>flex可以使元素具有弹性，让元素可以跟随页面的大小的该百年而改变</p>
+<p>弹性容器</p>
+<p>要使用弹性盒，必须先将一个元素设置为弹性容器</p>
+<p>display：flex 设置块级弹性容器</p>
+<p>display：inline-flex设置为行内的弹性容器</p>
+<p>弹性元素</p>
+<p>弹性容器的子元素是弹性元素（弹性项）</p>
+<p>弹性容器可以同时是弹性容器</p>
+<p>flex-direction指定容器中的弹性元素的排列方式</p>
+<p>可选值：</p>
+<p>row默认值，弹性元素在容器中水平排列，左向右</p>
+<p>主轴：自左向右</p>
+<p>row-reverse反向水平</p>
+<p>主轴：自右向左</p>
+<p>colum弹性元素纵向排列（自下向上）</p>
+<p>colum-reverse弹性元素方向纵向排列</p>
+<p>主轴：弹性元素的排列方向成为主轴</p>
+<p>侧轴：于主轴垂直方向的成为侧轴</p>
+<p>弹性元素的属性：</p>
+<p>flex-grow指定弹性元素的伸展系数</p>
+<p>当父元素有多余空间时，子元素如何伸展，父元素的剩余空间，会按照比例进行分配</p>
+<p>flex-shrink指定弹性元素的收缩系数</p>
+<p>当父元素的空间不足以容纳子元素时，对子元素进行收缩</p>
+<p>flex-wrap</p>
+<p>设置弹性元素是否子啊弹性容器中自定换行</p>
+<p>可选值：nowarp默认值，元素不会自动换行</p>
+<p>wrap元素沿着辅轴的方向自动换行</p>
+<p>wrap-reverse元素沿着辅轴反方向换行</p>
+<p>flex-flow：wrap和direction的简写属性</p>
+<p>flex-flow：row，wrap；</p>
+<h3 id="弹性容器"><a href="#弹性容器" class="headerlink" title="弹性容器"></a>弹性容器</h3><p>justify-contnet如何分配主轴上的空白空间（主轴上的元素如何排列）</p>
+<p>可选值：</p>
+<p>flex-start 元素沿着主轴起边排列</p>
+<p>flex-end元素沿着主轴终边排列</p>
+<p>center元素居中</p>
+<p>space-around空白分布到元素额两侧</p>
+<p>space-between空白均匀分布到元素间</p>
+<p>space-evenly空白分布到元素的的单侧 </p>
+<p> align-items </p>
+<p>元素在辅轴上如何对齐</p>
+<p>元素间的关系</p>
+<p>可选值：</p>
+<p>stretch默认值，将元素的长度设置为相同的值</p>
+<p>flex-start元素不会拉伸，沿着辅轴起边对齐</p>
+<p>flex-end沿着辅轴的终边对齐</p>
+<p>center居中对齐</p>
+<p>baseline基线对齐</p>
+<p>align-content：与justify一样</p>
+<h3 id="弹性元素"><a href="#弹性元素" class="headerlink" title="弹性元素"></a>弹性元素</h3><p>增长系数：flex-grow</p>
+<p>缩减系数：flex-shrink</p>
+<p>元素基础长度</p>
+<p>flex-basis指定的是元素在主轴上的基础长度</p>
+<p>如果主轴是横向的则该值指定的就是元素的宽度</p>
+<p>如果主轴是纵向的则该值指定的就是元素的高度</p>
+<p>默认值是auto，表示参考元素自身的盖度或宽度</p>
+<p>如果传递一个具体的数值，则以该值为准</p>
+<p>flex可以设置弹性元素所有的三个样式</p>
+<p>flex增长 缩减 基础</p>
+<p>initial flex 0 1 auto</p>
+<p>auto flex 1 1 auto</p>
+<p>none flex 0  0 auto没有弹性</p>
+<p>order决定弹性元素的排列顺序</p>
+<h2 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h2><p>网页可以根据不同的设备或窗口大小呈现出不同的效果</p>
+<p>使用响应式布局，可以使一个网页适用于所有设备</p>
+<p>响应式网页的关键就是  媒体查询</p>
+<p>通过媒体查询，可以为不同的设备或设备不同状态了分别设置样式</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> 查询规则</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<p>媒体类型：</p>
+<p>all所有设备</p>
+<p>print 打印设备</p>
+<p>screen带屏幕的设备</p>
+<p>speech屏幕阅读器</p>
+<p>可以使用逗号连接多个媒体类型</p>
+<p>媒体特性：</p>
+<p>width视口的宽度</p>
+<p>height视口的高度</p>
+<p>min-width视口的最小宽度（视口大于指定宽度是生效）</p>
+<p>min-height视口的最大宽度</p>
+<p>常用断点</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202201231546307.png" alt="Snipaste_2022-01-23_15-46-32"></p>
 
                 
             </div>
