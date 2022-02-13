@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-23
+                    2022-02-10
                 </div>
                 
 
@@ -1064,7 +1064,48 @@ border-right：none<span class="token punctuation">;</span>
 <p>我们也可以手动指定径向渐变的大小</p>
 <p>circle  ellipse </p>
 <p>也可以指定渐变的位置</p>
-<h2 id="弹性盒"><a href="#弹性盒" class="headerlink" title="弹性盒"></a>弹性盒</h2><p>flex（弹性盒）</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table><tr><td><table>
+
+<p>colspan横向的合并单元格</p>
+<p>rowspan纵向的合并单元格</p>
+<h3 id="长表格"><a href="#长表格" class="headerlink" title="长表格"></a>长表格</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>头部<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>主题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tfoot</span><span class="token punctuation">></span></span>底部<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tfoot</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>th表示头部的单元格</p>
+<pre class=" language-css"><code class="language-css"><span class="token property">border-spacing</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>//指定边框之间的距离
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token property">border-spacing</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>//设置边框的合并
+</code></pre>
+<p>如果没有使用tbody而是直接使用tr，那么浏览器会自动创建一个tbody，并且将突然全都放到tbody中</p>
+<p>tr不是table的子元素</p>
+<p>默认情况下元素在td中是垂直居中的，可以通过vertical-align，text-align来设置</p>
+<h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><p>用于提交填写的数据</p>
+<p>form标签</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>表单要提交的服务器的地址<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>autocomplete表单自动完成，提示输入</p>
+<p>readonly将表单设置为只读</p>
+<p>disabled设置为只读</p>
+<p>autofocus设置表单项自动获取焦点</p>
+<h2 id="less"><a href="#less" class="headerlink" title="less"></a>less</h2><p>less是一门css的预处理语言，是一个css的增强版，通过less可以编写更少的代码实现更加强大的样式，兼容性不好</p>
+<p>添加了许多新的特性，像对变量的支持，对mixin的支持</p>
+<p>less在语法上大体和css一致，但是less中增添了许多对css的拓展，所以浏览器无法直接执行less代码，要执行必须向将less转换为css，然后再由浏览器执行</p>
+<p>变量的设置：–color：</p>
+<p>引用前面加上var</p>
+<p>calc计算函数</p>
+<p>浏览器无法直接执行less文件，要执行必须将less转换为css文件，再由浏览器执行</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>  可以直接使用其嵌套目录进行css代码的编写</p>
+<p> 变量；在变量中可以存储一个任意的值，在需要的时候，可以随意修改</p>
+<pre class=" language-css"><code class="language-css">@变量名，可以是颜色，大小px
+</code></pre>
+<p>作为类名，或者一部分值使用时必须以@{变量名}的形式使用</p>
+<h2 id="弹性盒css"><a href="#弹性盒css" class="headerlink" title="弹性盒css"></a>弹性盒css</h2><p>flex（弹性盒）</p>
 <p>是CSS中的有一种布局手段，它主要用来代替浮动来完成页面的布局</p>
 <p>flex可以使元素具有弹性，让元素可以跟随页面的大小的该百年而改变</p>
 <p>弹性容器</p>
@@ -1655,13 +1696,13 @@ border-right：none<span class="token punctuation">;</span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/31/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                <a href="/2021/11/18/HTML-CSS%E5%AE%9E%E4%BE%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C++学习笔记">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="HTML/CSS实例">
                         
-                        <span class="card-title">C++学习笔记</span>
+                        <span class="card-title">HTML/CSS实例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1672,7 +1713,7 @@ border-right：none<span class="token punctuation">;</span>
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-31
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
                         </span>
                         <span class="publish-author">
                             
@@ -1681,6 +1722,14 @@ border-right：none<span class="token punctuation">;</span>
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AE%9E%E4%BE%8B/">
+                        <span class="chip bg-color">实例</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1718,6 +1767,14 @@ border-right：none<span class="token punctuation">;</span>
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
                 </div>
                 
             </div>
