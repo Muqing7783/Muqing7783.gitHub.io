@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-13
+                    2022-03-13
                 </div>
                 
 
@@ -482,8 +482,274 @@
 <pre><code>&lt;script&gt;
     
 &lt;/script&gt;
+一般放在head或者是body中
 </code></pre>
 <p>内写JavaScript代码</p>
+<p>ES6JavaScript的执行标准</p>
+<p>但是大部分浏览器还只停留在es5上</p>
+<h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h3><p>html引入js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"地址"</span><span class="token operator">></span><span class="token operator">&lt;</span>script<span class="token operator">></span>
+</code></pre>
+<p>script必须成对出现</p>
+<p>type</p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p> 严格区分大小写</p>
+<p>在浏览器的控制台打印变量</p>
+<p>console.log(变量)</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>数值、文本、图形、音频、视频</p>
+<p>number</p>
+<p>js不区分小鼠和整数</p>
+<p>NaN打印的不是一个数字就输出这个</p>
+<p>Infinity     表示无限大</p>
+<p>字符串</p>
+<p>‘abc’   “abc”</p>
+<p>布尔值</p>
+<p>true、false</p>
+<p>逻辑运算&amp;&amp; || ！</p>
+<p>比较运算符</p>
+<p>=</p>
+<p>==等于（类型不一样，值也一样，也会判断成true）</p>
+<p>=== 绝对等于（类型一样，值一样，结果为true）</p>
+<p>不要使用==进行比较NaN===NaN，这个与所有的数值都不相等，包括自己</p>
+<p>只能通过isNaN（NaN）来判断这个数是否是NaN</p>
+<p>浮点数问题：</p>
+<p>尽量避免使用浮点数进行运算，存在精度问题</p>
+<p>null空</p>
+<p>undefined未定义</p>
+<p>数组</p>
+<p>JS数组中的数据可以为不同的数据类型</p>
+<p>数组下表如果越界了会报undefined</p>
+<p>对象</p>
+<p>对象是大括号，数组是中括号，每个属性之间用逗号隔开，最后一个不需要添加</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">"qindbna"</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    tags<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'hah'</span><span class="token punctuation">,</span><span class="token string">'daj'</span><span class="token punctuation">,</span><span class="token string">'dadn'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>取对象的值</p>
+<pre class=" language-javascript"><code class="language-javascript">person<span class="token punctuation">.</span>name
+<span class="token operator">></span><span class="token string">"qindbna"</span>
+person<span class="token punctuation">.</span>age
+<span class="token operator">></span><span class="token number">2</span>
+</code></pre>
+<p> 局部变量建议都是用let进行定义变量</p>
+<p>‘use strict’；严格检查模式，预防Javascript的随意性导致产生的一些问题</p>
+<p>，必须写在js的第一行</p>
+<p>正常的字符串我们使用的单引号，或者是双引号包裹</p>
+<p>注意转义字符\，Unicode，Ascll字符</p>
+<p>多行字符串编写</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//tab上面esc下面</span>
+<span class="token keyword">var</span> msg <span class="token operator">=</span> 
+    <span class="token template-string"><span class="token string">`hello
+    world
+    你好`</span></span>
+</code></pre>
+<p>模板字符串</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"qinfdba"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> msg <span class="token operator">=</span> <span class="token template-string"><span class="token string">`你好,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+</code></pre>
+<p>字符串长度</p>
+<p>str.length</p>
+<p>字符串的可变性，不可变，已经赋值的字符串，再进行赋值无法成功赋值</p>
+<p>大小写转换这里是方法不是属性</p>
+<pre class=" language-javascript"><code class="language-javascript">student<span class="token punctuation">.</span><span class="token function">touppercase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+student<span class="token punctuation">.</span><span class="token function">tolowercase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>student.indexof(‘t’)获得该元素的下标索引</p>
+<p>substring//截取字符串</p>
+<p>数组</p>
+<p>js的数组可以包含任意的数据类型</p>
+<p>arr.length</p>
+<p>注意：加入给arr.length赋值，数组大小就会发生变化，如果赋值过下，元素会丢失</p>
+<p>indexof（）获得下标索引</p>
+<p>字符换的“1”和数字1不同</p>
+<p>slice截取array的一部分，返回一个新的数组，类似于String中的substring</p>
+<p>添加元素push添加到尾部</p>
+<p>pop弹出尾部的最后一个元素</p>
+<p>unshift（）在头部添加元素</p>
+<p>shift弹出头部的第一个元素</p>
+<p>排序：sort（）</p>
+<p>元素反转：reverse（）</p>
+<p>concat（）拼接，并没有修改数组，只是返回一个新的数组</p>
+<p>连接符：join</p>
+<p>打印拼接数组，使用特定的字符串进行连接</p>
+<p>多维数组</p>
+<pre class=" language-javascript"><code class="language-javascript">arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+</code></pre>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>js中的所有的键都是字符串，值是任意对象！</p>
+<p>若干个键值对</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> 对象名 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    属性名： 属性值，
+    属性名： 属性值，
+    属性名： 属性值，
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//定义了一个person独享，他有四个属性</span>
+<span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name：<span class="token string">"dnakd0"</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span>
+    email<span class="token punctuation">:</span> <span class="token string">"dajkdbabdk@com"</span><span class="token punctuation">,</span>
+    score<span class="token punctuation">:</span><span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>JS中对象，{…….}表示一个对象，键值对描述属性XXXX:XXXX0,多个属性之间使用逗号隔开，最后一个属性不加逗号！</p>
+<p>1.对象赋值</p>
+<p>person.name = “dbja”</p>
+<p>“dajb”</p>
+<p>person.name</p>
+<p>“dabjbda”</p>
+<p>2.使用一个不存在的对象属性，不会报错！ unfined</p>
+<pre class=" language-javascript"><code class="language-javascript">underfined
+</code></pre>
+<p>3.动态的删减属性，通过deledt删除的属性</p>
+<pre class=" language-javascript"><code class="language-javascript">person<span class="token punctuation">.</span>haha <span class="token operator">=</span> <span class="token string">"haha"</span>
+<span class="token string">"haha"</span>
+person
+</code></pre>
+<p>5.判断属性值是否在这个对象中！ xxx in xxxx</p>
+<p>6、判断一个属性是否是这个对象自身拥有的hasOwnProperty()</p>
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><p>if判断</p>
+<p>循环</p>
+<p>while，避免死循环</p>
+<p>for循环，使用let定义变量</p>
+<p>for each循环</p>
+<p>for 。。。。in循环</p>
+<h3 id="Map和Set"><a href="#Map和Set" class="headerlink" title="Map和Set"></a>Map和Set</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'tom'</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'jakd'</span><span class="token punctuation">,</span><span class="token number">99</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'dad'</span><span class="token punctuation">,</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'tom'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//通过key获得value</span>
+map。<span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">'admin'</span><span class="token punctuation">,</span><span class="token number">131312</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//新增或修改</span>
+map<span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span><span class="token string">'tom'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//删除</span>
+</code></pre>
+<p>Set：无序不重复的集合</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//添加</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//删除</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//是f</span>
+</code></pre>
+<h3 id="iterator"><a href="#iterator" class="headerlink" title="iterator"></a>iterator</h3><p>ES6新特性</p>
+<p>遍历数组</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> x <span class="token keyword">for</span> arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>遍历map</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"TOm"</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">"jack"</span><span class="token punctuation">,</span><span class="token number">90</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">"haha"</span><span class="token punctuation">,</span><span class="token number">80</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> x <span class="token keyword">of</span> map<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+va
+</code></pre>
+<p>遍历set</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> xof <span class="token keyword">set</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">abs</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    具体代码
+<span class="token punctuation">}</span>
+</code></pre>
+<p>一但执行到return代表函数结束，返回结果</p>
+<p>如果没有执行return，函数执行完就也会返回结果，结果就是unfined</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> abs <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+</code></pre>
+<p>function(x){ ….}这是一个匿名函数。但是可以把结果付给abs，通过abs就可以调用函数</p>
+<h4 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h4><p>abs(10)</p>
+<p>abs(-10)</p>
+<p>参数问题：Js可以传任意个参数，也可以不传递参数~</p>
+<p>可以手动写代码抛出异常</p>
+<pre class=" language-javas"><code class="language-javas">var abs = function(x){
+//手动抛出异常
+    if(typer x!== 'number'){
+        throw 'Not a number'
+    }
+    if(x>=o)
+        return x;
+    else
+        return -x;
+}
+</code></pre>
+<p>arguments是js赠送的关键字</p>
+<p>代表，传递进来的所有的参数，是一个数组</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121241285.png" alt="Snipaste_2022-03-12_12-41-06"></p>
+<p>问题：arguments包含所有的参数，我们有时候想使用多鱼的参数来进行附加操作。需要排除已有参数</p>
+<p>== rest ==</p>
+<p>获取除了已经定义的参数之外的所有参数</p>
+<pre class=" language-javas"><code class="language-javas">function aaa(a,b,...rest){
+console.log("a=>"+a);
+console.log("b=>"+b);
+console.log(rest);
+}
+</code></pre>
+<h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h4><p>在JS中，var定义变量实际是有作用域的</p>
+<p>假设在函数体中声明，则函数体外不可以使用</p>
+<p>如果函数使用了相同的变量名，只要在函数内部，就不冲突</p>
+<p>内部函数可以访问外部函数的成员，反之不行</p>
+<p>假设在JavaScript 中 函数查找变量从自身函数开始~，由“内”向“外”查找，假设<br>外部存在这个同名的函数变量，则内部函数会屏蔽外部函数的变量。</p>
+<p>JS实际上只有一个全局作用域，任何变量（函数也可以视为变量），假设、没有在函数作用找到，就会向外查找，如果在全局作用域都没有找到，报错RefrenceError</p>
+<p>由于我们所有的全局变量都会绑定到我们的window上。如果不同的JS问价按，使用了相同的全局变量，冲突~&gt;如和能够减少冲突？</p>
+<p>把自己的代码全部放入自己定义的唯一空间名字中，降低全局命名冲突的问题</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121419254.png" alt="Snipaste_2022-03-12_14-19-45"></p>
+<p>ES6 let关键字，解决局部作用域的冲突问题</p>
+<p>建议使用let关键字去定义局部作用域的变量</p>
+<p>常量 const，类似java fine，不能重复赋值</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>方法就是把函数放在对象的里面，对象只有两个东西：属性和方法</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121433186.png" alt="Snipaste_2022-03-12_14-33-07"></p>
+<p>this指向调用的对象</p>
+<p>apply在JS中可以控制this指向</p>
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121507769.png" alt="Snipaste_2022-03-12_15-07-39"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121508683.png" alt="Snipaste_2022-03-12_15-07-55"></p>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>json是什么</p>
+<p>在JS中一切皆为对象，任何JS支持的类型都可以用JSON表示</p>
+<p>格式：</p>
+<ul>
+<li>对象都用{}</li>
+<li>数组都用[]</li>
+<li>所有的键值对都是用key：value</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121517880.png" alt="Snipaste_2022-03-12_15-17-37"></p>
+<h3 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h3><p>两个对象，其中一个对象使用</p>
+<pre class=" language-javascript"><code class="language-javascript">mingzi<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> 另一个对象
+</code></pre>
+<p>可以调用另一个对象中的属性</p>
+<p>将另一个对象看成父元素</p>
+<h3 id="class继承"><a href="#class继承" class="headerlink" title="class继承"></a>class继承</h3><p>ES6后的</p>
+<p>定义一个类，属性，方法</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121535261.png" alt="Snipaste_2022-03-12_15-35-39"></p>
+<h3 id="操作BOM对象"><a href="#操作BOM对象" class="headerlink" title="操作BOM对象"></a>操作BOM对象</h3><blockquote>
+<p>浏览器介绍</p>
+</blockquote>
+<p>JS诞生就是为了能偶让他在浏览器中运行</p>
+<ul>
+<li>IE</li>
+<li>Chrome</li>
+<li>Safari</li>
+<li>Firefox</li>
+</ul>
+<h3 id="操作DOM对象"><a href="#操作DOM对象" class="headerlink" title="操作DOM对象"></a>操作DOM对象</h3><p> 浏览器网页就是一个DOM树形结构</p>
+<ul>
+<li>更新DOM结点</li>
+<li>遍历DOM节点：得到DOM节点</li>
+<li>删除DOM节点</li>
+<li>添加DOM节点</li>
+</ul>
+<p>要操作一个DOM节点，就必须要先获得这个DOM节点</p>
+<h4 id="得到"><a href="#得到" class="headerlink" title="得到"></a>得到</h4><p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121618966.png" alt="Snipaste_2022-03-12_16-18-00"></p>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121701090.png" alt="Snipaste_2022-03-12_17-01-02"></p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>删除子节点的步骤：先获取父节点，在通过父节点删除自己</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121705116.png" alt="Snipaste_2022-03-12_17-05-33"></p>
+<p>注意：删除多个节点的时候，children是在时刻变化的，删除节点的时候一定要注意</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203121913965.png" alt="Snipaste_2022-03-12_19-13-24"></p>
+<h4 id="操作表单"><a href="#操作表单" class="headerlink" title="操作表单"></a>操作表单</h4><p>​    <img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203131242327.png" alt="Snipaste_2022-03-13_12-42-32"></p>
+<p>提交表单的按钮，可以绑定事件onlick，被点击，跳转到js函数，可以实现提交按钮弹出提交成功</p>
+<p>MD5加密</p>
+<p><img src="C:/Users/lishijie/Desktop/img/Snipaste_2022-03-13_13-16-32.png" alt="Snipaste_2022-03-13_13-16-32"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203131316929.png" alt="Snipaste_2022-03-13_13-16-38"></p>
+<h3 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h3><p>公式：$(选择器).action()</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Muqing7783/imgbed/posts/202203131329010.png" alt="Snipaste_2022-03-13_13-29-03"></p>
 
                 
             </div>
@@ -510,7 +776,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://muqing7783.github.io/2022/02/06/javaScript/">https://muqing7783.github.io/2022/02/06/javaScript/</a>
+                    <a href="https://muqing7783.github.io/2022/02/06/JavaScript/">https://muqing7783.github.io/2022/02/06/JavaScript/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -988,18 +1254,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/02/06/javaScript/">
+                <a href="/2022/03/01/Web%E5%BA%94%E7%94%A8%E8%AF%BE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.png" class="responsive-img" alt="JavaScript">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Web应用课">
                         
-                        <span class="card-title">JavaScript</span>
+                        <span class="card-title">Web应用课</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1009,9 +1274,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1020,7 +1285,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
