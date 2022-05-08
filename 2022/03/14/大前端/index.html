@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="特殊语句, MuQing&#39;s Blog - 月亮看我一眼吧">
+    <meta name="keywords" content="大前端, MuQing&#39;s Blog - 月亮看我一眼吧">
     <meta name="description" content="穆如清风">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>特殊语句 | MuQing&#39;s Blog - 月亮看我一眼吧</title>
+    <title>大前端 | MuQing&#39;s Blog - 月亮看我一眼吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">特殊语句</h1>
+                    <h1 class="description center-align post-title">大前端</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9D%82/">
-                                <span class="chip bg-color">杂</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -447,14 +447,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-09
+                    2022-03-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-30
+                    2022-03-14
                 </div>
                 
 
@@ -478,33 +478,90 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><p>输入一个除空格以外的可见字符（保证在函数<code>scanf</code>中可使用格式说明符<code>%c</code>读入），输出其 ASCII 码。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner<span class="token punctuation">;</span>
+                <h1 id="大前端"><a href="#大前端" class="headerlink" title="大前端"></a>大前端</h1><h2 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS"></a>NodeJS</h2><p>nodejs就是运行在服务器端的Javascript。nodejs是一个基于Chrome JavaScript运行时建立的一个平台，底层架构是：JavaScript文件后缀.js</p>
+<p>nodejs是一个时间驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行JavaScript速度非常快，性能非常好</p>
+<h3 id="操作httpserver服务"><a href="#操作httpserver服务" class="headerlink" title="操作httpserver服务"></a>操作httpserver服务</h3><pre class=" language-node"><code class="language-node">导入模块是require就类似于import.java.io
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Scanner scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        String s <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">char</span> a <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//此代码报错</span>
-</code></pre>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner<span class="token punctuation">;</span>
+const http = require('http');
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Scanner scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        String s <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">char</span> a <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//正确代码</span>
+创建一个httpserve服务
+http.createServer(function (request,response){
+    //浏览器怎么认识hello server
+    response.writeHead(200,{'Content-type':'text/plain'});//这句话是告诉浏览器以text-plain的方式去解析这段数据
+    //浏览器输出的内容
+    response.end('hellto  ');
+}).listen(8081);//监听的端口
+console.log('qidong1chenggong1');
 </code></pre>
-<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>数组逆序排序</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">67</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">63</span><span class="token punctuation">,</span><span class="token number">46</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">(</span>b<span class="token operator">-</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h3 id="操作mysql数据库"><a href="#操作mysql数据库" class="headerlink" title="操作mysql数据库"></a>操作mysql数据库</h3><pre class=" language-node"><code class="language-node">//导入依赖包
+var mysql = require("mysql");
+//创建mysql的连接对象
+//配置数据库的连接信息
+var connection = mysql.createConnection({
+    host:"10.23.160.141",
+    user:"root",
+    port:3306,
+    password:"123456",
+    database:"textdb"
+});
+//开辟连接
+connection.connect();
+//执行curd
+connection.query("select * from text",function (error,result,fields){
+   //入果出错，直接抛出
+   if(error)
+       throw error;
+   //查询成功
+    console.log("result = ",result);
+});
+//关闭连接
+connection.end();
+//最后：运行node db.js 查看效果
+</code></pre>
+<pre class=" language-node"><code class="language-node">1: npm : node package manager ,node包管理器，类似于maven
+作用：
+1: 快速构建nodejs工程
+npm init
+得到package.json文件
+{
+  "name": "npmtext",//工程名
+  "version": "1.0.0",//版本
+  "description": "这是一个node测试工程",//描述
+  "main": "index.js",//入口JS
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {//运行脚本
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "L",//作者
+  "license": "ISC"//授权
+}
+2：快速安装和依赖第三个模块。比如npm install mysql redis等等。
+npm install XXXX或者是npm i XXXX模块名
+安装模块放在什么地方
+安装模块会放在node_modules文件夹中
+安装模块如何使用
+导入模块 require
+如何运行
+node XXXX.js 终止程序 ctrl+C
+模块和package.json有什么关系
+通过npm install xxx 会记录在package.json这个文件中。
+就类似于maven中pom.xml一个含义，记录作用：复用。
+1：package.json记录的依赖模块
+2：通过npm install 可以直接把package.json所依赖的模块全部自动下载下来
+这样就可以避免重复下载模块。很方便去集成的第三模块。
+3：为什么不直接拷贝node_modules
+文件过于庞大
+下载缓慢
+更改为淘宝镜像
+如何下载多个？npm install jquery vue redis mysql
+cnpm install jquery / vue redis mysql
+下载指定的版本号 npm install xxx@版本号
+具体的版本号：查看官方网址
+https://www.npmjs.com/package/redis
+如何卸载模块呢npm uninstall vue jquery
 </code></pre>
 
                 
@@ -532,7 +589,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://muqing7783.github.io/2022/01/09/%E7%89%B9%E6%AE%8A%E8%AF%AD%E5%8F%A5/">https://muqing7783.github.io/2022/01/09/%E7%89%B9%E6%AE%8A%E8%AF%AD%E5%8F%A5/</a>
+                    <a href="https://muqing7783.github.io/2022/03/14/%E5%A4%A7%E5%89%8D%E7%AB%AF/">https://muqing7783.github.io/2022/03/14/%E5%A4%A7%E5%89%8D%E7%AB%AF/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,8 +627,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9D%82/">
-                                    <span class="chip bg-color">杂</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
                         </div>
@@ -1010,17 +1067,18 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/02/06/JavaScript/">
+                <a href="/2022/03/14/%E5%A4%A7%E5%89%8D%E7%AB%AF/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.png" class="responsive-img" alt="JavaScript">
+                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="大前端">
                         
-                        <span class="card-title">JavaScript</span>
+                        <span class="card-title">大前端</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1030,9 +1088,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1041,6 +1099,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1059,13 +1118,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/18/HTML-CSS%E5%AE%9E%E4%BE%8B/">
+                <a href="/2022/03/13/vue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="HTML/CSS实例">
+                        <img src="/medias/featureimages/6.png" class="responsive-img" alt="vue">
                         
-                        <span class="card-title">HTML/CSS实例</span>
+                        <span class="card-title">vue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1076,7 +1135,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-13
                             </span>
                         <span class="publish-author">
                             
@@ -1089,8 +1148,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AE%9E%E4%BE%8B/">
-                        <span class="chip bg-color">实例</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
